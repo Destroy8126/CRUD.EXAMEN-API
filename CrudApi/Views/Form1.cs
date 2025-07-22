@@ -231,5 +231,10 @@ namespace CrudApi
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
