@@ -226,18 +226,8 @@ namespace CrudApi
             btnEditar.BackColor = Color.Green;
 
         }
-        private void ActualizarContador()
-        {
-            int visibles = 0;
 
-            foreach (DataGridViewRow row in dgvCharacters.Rows)
-            {
-                if (row.Visible)
-                    visibles++;
-            }
 
-            lblTotalRegistros.Text = $"Total registros: {visibles}";
-        }
 
     }
 }

@@ -49,7 +49,7 @@
             label4 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
-            lblTotalRegistros = new Label();
+            lblContador = new Label();
             panel3 = new Panel();
             label2 = new Label();
             panel2 = new Panel();
@@ -283,7 +283,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
-            groupBox1.Controls.Add(lblTotalRegistros);
+            groupBox1.Controls.Add(lblContador);
             groupBox1.Controls.Add(dgvCharacters);
             groupBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
@@ -295,14 +295,14 @@
             groupBox1.Text = "REGISTROS";
             groupBox1.Enter += groupBox1_Enter;
             // 
-            // lblTotalRegistros
+            // lblContador
             // 
-            lblTotalRegistros.AutoSize = true;
-            lblTotalRegistros.Location = new Point(817, 356);
-            lblTotalRegistros.Name = "lblTotalRegistros";
-            lblTotalRegistros.Size = new Size(137, 19);
-            lblTotalRegistros.TabIndex = 2;
-            lblTotalRegistros.Text = "Total registros: 0";
+            lblContador.AutoSize = true;
+            lblContador.Location = new Point(817, 356);
+            lblContador.Name = "lblContador";
+            lblContador.Size = new Size(137, 19);
+            lblContador.TabIndex = 2;
+            lblContador.Text = "Total registros: 0";
             // 
             // panel3
             // 
@@ -405,6 +405,6 @@
         private DataGridViewTextBoxColumn Sexo;
         private Button btnEditar;
         private Label label7;
-        private Label lblTotalRegistros;
+        private Label lblContador;
     }
 }
