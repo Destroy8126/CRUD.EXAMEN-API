@@ -49,12 +49,13 @@
             label4 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
+            btnContarRegistros = new Button();
+            lblContador = new Label();
             panel3 = new Panel();
             label2 = new Label();
             panel2 = new Panel();
             label7 = new Label();
             label1 = new Label();
-            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvCharacters).BeginInit();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -283,7 +284,8 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
-            groupBox1.Controls.Add(label8);
+            groupBox1.Controls.Add(btnContarRegistros);
+            groupBox1.Controls.Add(lblContador);
             groupBox1.Controls.Add(dgvCharacters);
             groupBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
@@ -294,6 +296,26 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "REGISTROS";
             groupBox1.Enter += groupBox1_Enter;
+            // 
+            // btnContarRegistros
+            // 
+            btnContarRegistros.BackColor = Color.Wheat;
+            btnContarRegistros.Location = new Point(643, 353);
+            btnContarRegistros.Name = "btnContarRegistros";
+            btnContarRegistros.Size = new Size(157, 29);
+            btnContarRegistros.TabIndex = 3;
+            btnContarRegistros.Text = "Contar registros";
+            btnContarRegistros.UseVisualStyleBackColor = false;
+            btnContarRegistros.Click += btnContarRegistros_Click;
+            // 
+            // lblContador
+            // 
+            lblContador.AutoSize = true;
+            lblContador.Location = new Point(817, 356);
+            lblContador.Name = "lblContador";
+            lblContador.Size = new Size(137, 19);
+            lblContador.TabIndex = 2;
+            lblContador.Text = "Total registros: 0";
             // 
             // panel3
             // 
@@ -346,15 +368,6 @@
             label1.Size = new Size(356, 138);
             label1.TabIndex = 3;
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(817, 356);
-            label8.Name = "label8";
-            label8.Size = new Size(55, 19);
-            label8.TabIndex = 2;
-            label8.Text = "label8";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -405,6 +418,7 @@
         private DataGridViewTextBoxColumn Sexo;
         private Button btnEditar;
         private Label label7;
-        private Label label8;
+        private Label lblContador;
+        private Button btnContarRegistros;
     }
 }
