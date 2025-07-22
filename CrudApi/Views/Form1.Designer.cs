@@ -359,12 +359,13 @@
             // 
             // butnBuscar
             // 
-            butnBuscar.Location = new Point(555, 124);
+            butnBuscar.BackColor = Color.LightSeaGreen;
+            butnBuscar.Location = new Point(554, 120);
             butnBuscar.Name = "butnBuscar";
-            butnBuscar.Size = new Size(73, 35);
+            butnBuscar.Size = new Size(146, 35);
             butnBuscar.TabIndex = 15;
-            butnBuscar.Text = "Buscar";
-            butnBuscar.UseVisualStyleBackColor = true;
+            butnBuscar.Text = "🔍 Buscar";
+            butnBuscar.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 
