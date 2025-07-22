@@ -55,6 +55,7 @@
             label7 = new Label();
             label1 = new Label();
             textBuscar = new TextBox();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCharacters).BeginInit();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -153,6 +154,7 @@
             // 
             panel4.BackColor = Color.PaleTurquoise;
             panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(button2);
             panel4.Controls.Add(textBuscar);
             panel4.Controls.Add(btnEditar);
             panel4.Controls.Add(button1);
@@ -355,6 +357,15 @@
             textBuscar.TabIndex = 14;
             textBuscar.TextChanged += textBox1_TextChanged;
             // 
+            // button2
+            // 
+            button2.Location = new Point(555, 124);
+            button2.Name = "button2";
+            button2.Size = new Size(73, 35);
+            button2.TabIndex = 15;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -405,5 +416,6 @@
         private Button btnEditar;
         private Label label7;
         private TextBox textBuscar;
+        private Button button2;
     }
 }
