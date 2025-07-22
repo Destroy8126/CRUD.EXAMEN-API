@@ -37,7 +37,7 @@ namespace CrudApi
             }
             else
             {
-                MessageBox.Show("No se pudo obtener la peticiÛn.",
+                MessageBox.Show("No se pudo obtener la petici√≥n.",
                     "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -121,13 +121,13 @@ namespace CrudApi
             {
                 // Actualizar personaje existente
                 resultado = await CharactersController.UpdateCharacter(currentEditingId, character);
-                currentEditingId = -1; // resetear id despuÈs de editar
-                txtSexo.ReadOnly = false; // desbloquear campo sexo para prÛximo uso
+                currentEditingId = -1; // resetear id despu√©s de editar
+                txtSexo.ReadOnly = false; // desbloquear campo sexo para pr√≥ximo uso
             }
 
             if (resultado)
             {
-                MessageBox.Show("°OperaciÛn realizada con Èxito!");
+                MessageBox.Show("¬°Operaci√≥n realizada con √©xito!");
                 dgvCharacters.Rows.Clear();
                 GetCharacters();
 
@@ -190,7 +190,7 @@ namespace CrudApi
             {
                 var filaSeleccionada = dgvCharacters.SelectedRows[0];
 
-                currentEditingId = Convert.ToInt32(filaSeleccionada.Cells[0].Value); // o usa Cells["id"].Value si asÌ lo tienes
+                currentEditingId = Convert.ToInt32(filaSeleccionada.Cells[0].Value); // o usa Cells["id"].Value si as√≠ lo tienes
 
                 txtNombre.Text = filaSeleccionada.Cells[1].Value?.ToString();
                 txtApellidos.Text = filaSeleccionada.Cells[2].Value?.ToString();
@@ -227,16 +227,42 @@ namespace CrudApi
 
         }
 
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string textoBusqueda = txtBuscar.Text.Trim();
+
+            foreach (DataGridViewRow row in dgvCharacters.Rows)
+            {
+                bool visible = row.Cells["Nombre"].Value.ToString().IndexOf(textoBusqueda, StringComparison.OrdinalIgnoreCase) >= 0
+                            || row.Cells["id"].Value.ToString().IndexOf(textoBusqueda, StringComparison.OrdinalIgnoreCase) >= 0;
+
+                row.Visible = visible;
+
+            }
+        }
+
         private void btnContarRegistros_Click(object sender, EventArgs e)
         {
             int total = dgvCharacters.Rows.Count;
 
-            // Si AllowUserToAddRows est· activo, se resta 1 porque esa fila es vacÌa
+            // Si AllowUserToAddRows est√° activo, se resta 1 porque esa fila es vac√≠a
             if (dgvCharacters.AllowUserToAddRows)
                 total -= 1;
 
             lblContador.Text = "Total registros: " + total.ToString();
         }
+
 
     }
 }

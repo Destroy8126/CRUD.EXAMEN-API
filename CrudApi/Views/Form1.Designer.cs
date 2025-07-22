@@ -37,6 +37,8 @@
             Sexo = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             panel4 = new Panel();
+            btnBuscar = new Button();
+            txtBuscar = new TextBox();
             btnEditar = new Button();
             btnEliminar = new Button();
             btnGuardar = new Button();
@@ -154,6 +156,8 @@
             // 
             panel4.BackColor = Color.PaleTurquoise;
             panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(btnBuscar);
+            panel4.Controls.Add(txtBuscar);
             panel4.Controls.Add(btnEditar);
             panel4.Controls.Add(button1);
             panel4.Controls.Add(btnEliminar);
@@ -172,6 +176,26 @@
             panel4.Size = new Size(1219, 554);
             panel4.TabIndex = 4;
             panel4.Paint += panel4_Paint;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.BackColor = SystemColors.Highlight;
+            btnBuscar.ForeColor = SystemColors.InfoText;
+            btnBuscar.Location = new Point(554, 120);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(146, 35);
+            btnBuscar.TabIndex = 15;
+            btnBuscar.Text = "🔍 Buscar";
+            btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Location = new Point(153, 124);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(380, 27);
+            txtBuscar.TabIndex = 14;
+            txtBuscar.TextChanged += textBox1_TextChanged;
             // 
             // btnEditar
             // 
@@ -338,6 +362,7 @@
             label2.Size = new Size(293, 34);
             label2.TabIndex = 0;
             label2.Text = "CRUD DE USUARIOS";
+            label2.Click += label2_Click;
             // 
             // panel2
             // 
@@ -418,7 +443,15 @@
         private DataGridViewTextBoxColumn Sexo;
         private Button btnEditar;
         private Label label7;
+
+        private TextBox txtBuscar;
+        private Button btnBuscar;
+
+        private Label label8;
+      
+
         private Label lblContador;
         private Button btnContarRegistros;
+
     }
 }
