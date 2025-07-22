@@ -359,7 +359,8 @@
             // 
             // butnBuscar
             // 
-            butnBuscar.BackColor = Color.LightSeaGreen;
+            butnBuscar.BackColor = SystemColors.Highlight;
+            butnBuscar.ForeColor = SystemColors.InfoText;
             butnBuscar.Location = new Point(554, 120);
             butnBuscar.Name = "butnBuscar";
             butnBuscar.Size = new Size(146, 35);
