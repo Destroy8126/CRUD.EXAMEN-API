@@ -37,7 +37,7 @@ namespace CrudApi
             }
             else
             {
-                MessageBox.Show("No se pudo obtener la petición.",
+                MessageBox.Show("No se pudo obtener la peticiÃ³n.",
                     "Error", MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
             }
@@ -121,13 +121,13 @@ namespace CrudApi
             {
                 // Actualizar personaje existente
                 resultado = await CharactersController.UpdateCharacter(currentEditingId, character);
-                currentEditingId = -1; // resetear id después de editar
-                txtSexo.ReadOnly = false; // desbloquear campo sexo para próximo uso
+                currentEditingId = -1; // resetear id despuÃ©s de editar
+                txtSexo.ReadOnly = false; // desbloquear campo sexo para prÃ³ximo uso
             }
 
             if (resultado)
             {
-                MessageBox.Show("¡Operación realizada con éxito!");
+                MessageBox.Show("Â¡OperaciÃ³n realizada con Ã©xito!");
                 dgvCharacters.Rows.Clear();
                 GetCharacters();
 
@@ -190,7 +190,7 @@ namespace CrudApi
             {
                 var filaSeleccionada = dgvCharacters.SelectedRows[0];
 
-                currentEditingId = Convert.ToInt32(filaSeleccionada.Cells[0].Value); // o usa Cells["id"].Value si así lo tienes
+                currentEditingId = Convert.ToInt32(filaSeleccionada.Cells[0].Value); // o usa Cells["id"].Value si asÃ­ lo tienes
 
                 txtNombre.Text = filaSeleccionada.Cells[1].Value?.ToString();
                 txtApellidos.Text = filaSeleccionada.Cells[2].Value?.ToString();
@@ -227,6 +227,7 @@ namespace CrudApi
 
         }
 
+
         private void label2_Click(object sender, EventArgs e)
         {
 
@@ -250,5 +251,18 @@ namespace CrudApi
 
             }
         }
+
+        private void btnContarRegistros_Click(object sender, EventArgs e)
+        {
+            int total = dgvCharacters.Rows.Count;
+
+            // Si AllowUserToAddRows estÃ¡ activo, se resta 1 porque esa fila es vacÃ­a
+            if (dgvCharacters.AllowUserToAddRows)
+                total -= 1;
+
+            lblContador.Text = "Total registros: " + total.ToString();
+        }
+
+
     }
 }
