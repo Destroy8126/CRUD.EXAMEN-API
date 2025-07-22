@@ -227,7 +227,16 @@ namespace CrudApi
 
         }
 
+        private void btnContarRegistros_Click(object sender, EventArgs e)
+        {
+            int total = dgvCharacters.Rows.Count;
 
+            // Si AllowUserToAddRows está activo, se resta 1 porque esa fila es vacía
+            if (dgvCharacters.AllowUserToAddRows)
+                total -= 1;
+
+            lblContador.Text = "Total registros: " + total.ToString();
+        }
 
     }
 }

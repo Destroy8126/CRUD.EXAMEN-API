@@ -359,12 +359,13 @@
             // 
             // btnContarRegistros
             // 
-            btnContarRegistros.Location = new Point(706, 353);
+            btnContarRegistros.Location = new Point(643, 353);
             btnContarRegistros.Name = "btnContarRegistros";
-            btnContarRegistros.Size = new Size(94, 29);
+            btnContarRegistros.Size = new Size(157, 29);
             btnContarRegistros.TabIndex = 3;
             btnContarRegistros.Text = "Contar registros";
             btnContarRegistros.UseVisualStyleBackColor = true;
+            btnContarRegistros.Click += btnContarRegistros_Click;
             // 
             // Form1
             // 
