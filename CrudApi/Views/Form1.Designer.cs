@@ -49,13 +49,13 @@
             label4 = new Label();
             label3 = new Label();
             groupBox1 = new GroupBox();
+            btnContarRegistros = new Button();
             lblContador = new Label();
             panel3 = new Panel();
             label2 = new Label();
             panel2 = new Panel();
             label7 = new Label();
             label1 = new Label();
-            btnContarRegistros = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCharacters).BeginInit();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -297,6 +297,17 @@
             groupBox1.Text = "REGISTROS";
             groupBox1.Enter += groupBox1_Enter;
             // 
+            // btnContarRegistros
+            // 
+            btnContarRegistros.BackColor = Color.Wheat;
+            btnContarRegistros.Location = new Point(643, 353);
+            btnContarRegistros.Name = "btnContarRegistros";
+            btnContarRegistros.Size = new Size(157, 29);
+            btnContarRegistros.TabIndex = 3;
+            btnContarRegistros.Text = "Contar registros";
+            btnContarRegistros.UseVisualStyleBackColor = false;
+            btnContarRegistros.Click += btnContarRegistros_Click;
+            // 
             // lblContador
             // 
             lblContador.AutoSize = true;
@@ -356,16 +367,6 @@
             label1.Name = "label1";
             label1.Size = new Size(356, 138);
             label1.TabIndex = 3;
-            // 
-            // btnContarRegistros
-            // 
-            btnContarRegistros.Location = new Point(643, 353);
-            btnContarRegistros.Name = "btnContarRegistros";
-            btnContarRegistros.Size = new Size(157, 29);
-            btnContarRegistros.TabIndex = 3;
-            btnContarRegistros.Text = "Contar registros";
-            btnContarRegistros.UseVisualStyleBackColor = true;
-            btnContarRegistros.Click += btnContarRegistros_Click;
             // 
             // Form1
             // 
