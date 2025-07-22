@@ -228,8 +228,16 @@ namespace CrudApi
         }
         private void ActualizarContador()
         {
-            int total = dgvCharacters.Rows.Count;
-            lblTotalRegistros.Text = $"Total registros: {total}";
+            int visibles = 0;
+
+            foreach (DataGridViewRow row in dgvCharacters.Rows)
+            {
+                if (row.Visible)
+                    visibles++;
+            }
+
+            lblTotalRegistros.Text = $"Total registros: {visibles}";
         }
+
     }
 }
