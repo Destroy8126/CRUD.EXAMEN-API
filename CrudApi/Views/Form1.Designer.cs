@@ -55,6 +55,7 @@
             panel2 = new Panel();
             label7 = new Label();
             label1 = new Label();
+            button2 = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCharacters).BeginInit();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -283,6 +284,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(button2);
             groupBox1.Controls.Add(lblContador);
             groupBox1.Controls.Add(dgvCharacters);
             groupBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -355,6 +357,15 @@
             label1.Size = new Size(356, 138);
             label1.TabIndex = 3;
             // 
+            // button2
+            // 
+            button2.Location = new Point(706, 353);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 3;
+            button2.Text = "button2";
+            button2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -406,5 +417,6 @@
         private Button btnEditar;
         private Label label7;
         private Label lblContador;
+        private Button button2;
     }
 }
