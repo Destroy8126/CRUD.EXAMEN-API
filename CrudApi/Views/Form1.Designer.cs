@@ -300,9 +300,9 @@
             lblTotalRegistros.AutoSize = true;
             lblTotalRegistros.Location = new Point(817, 356);
             lblTotalRegistros.Name = "lblTotalRegistros";
-            lblTotalRegistros.Size = new Size(55, 19);
+            lblTotalRegistros.Size = new Size(137, 19);
             lblTotalRegistros.TabIndex = 2;
-            lblTotalRegistros.Text = "label8";
+            lblTotalRegistros.Text = "Total registros: 0";
             // 
             // panel3
             // 
