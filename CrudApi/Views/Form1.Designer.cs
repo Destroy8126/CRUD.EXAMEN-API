@@ -363,7 +363,7 @@
             btnContarRegistros.Name = "btnContarRegistros";
             btnContarRegistros.Size = new Size(94, 29);
             btnContarRegistros.TabIndex = 3;
-            btnContarRegistros.Text = "button2";
+            btnContarRegistros.Text = "Contar registros";
             btnContarRegistros.UseVisualStyleBackColor = true;
             // 
             // Form1
