@@ -37,6 +37,8 @@
             Sexo = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             panel4 = new Panel();
+            btnBuscar = new Button();
+            txtBuscar = new TextBox();
             btnEditar = new Button();
             btnEliminar = new Button();
             btnGuardar = new Button();
@@ -54,8 +56,6 @@
             panel2 = new Panel();
             label7 = new Label();
             label1 = new Label();
-            textBuscar = new TextBox();
-            butnBuscar = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvCharacters).BeginInit();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -154,8 +154,8 @@
             // 
             panel4.BackColor = Color.PaleTurquoise;
             panel4.BorderStyle = BorderStyle.FixedSingle;
-            panel4.Controls.Add(butnBuscar);
-            panel4.Controls.Add(textBuscar);
+            panel4.Controls.Add(btnBuscar);
+            panel4.Controls.Add(txtBuscar);
             panel4.Controls.Add(btnEditar);
             panel4.Controls.Add(button1);
             panel4.Controls.Add(btnEliminar);
@@ -174,6 +174,26 @@
             panel4.Size = new Size(1219, 554);
             panel4.TabIndex = 4;
             panel4.Paint += panel4_Paint;
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.BackColor = SystemColors.Highlight;
+            btnBuscar.ForeColor = SystemColors.InfoText;
+            btnBuscar.Location = new Point(554, 120);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(146, 35);
+            btnBuscar.TabIndex = 15;
+            btnBuscar.Text = "🔍 Buscar";
+            btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Location = new Point(153, 124);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(380, 27);
+            txtBuscar.TabIndex = 14;
+            txtBuscar.TextChanged += textBox1_TextChanged;
             // 
             // btnEditar
             // 
@@ -349,25 +369,6 @@
             label1.Size = new Size(356, 138);
             label1.TabIndex = 3;
             // 
-            // textBuscar
-            // 
-            textBuscar.Location = new Point(153, 124);
-            textBuscar.Name = "textBuscar";
-            textBuscar.Size = new Size(380, 27);
-            textBuscar.TabIndex = 14;
-            textBuscar.TextChanged += textBox1_TextChanged;
-            // 
-            // butnBuscar
-            // 
-            butnBuscar.BackColor = SystemColors.Highlight;
-            butnBuscar.ForeColor = SystemColors.InfoText;
-            butnBuscar.Location = new Point(554, 120);
-            butnBuscar.Name = "butnBuscar";
-            butnBuscar.Size = new Size(146, 35);
-            butnBuscar.TabIndex = 15;
-            butnBuscar.Text = "🔍 Buscar";
-            butnBuscar.UseVisualStyleBackColor = false;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -417,7 +418,7 @@
         private DataGridViewTextBoxColumn Sexo;
         private Button btnEditar;
         private Label label7;
-        private TextBox textBuscar;
-        private Button butnBuscar;
+        private TextBox txtBuscar;
+        private Button btnBuscar;
     }
 }

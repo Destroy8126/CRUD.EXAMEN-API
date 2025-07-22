@@ -236,5 +236,19 @@ namespace CrudApi
         {
 
         }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string textoBusqueda = txtBuscar.Text.Trim();
+
+            foreach (DataGridViewRow row in dgvCharacters.Rows)
+            {
+                bool visible = row.Cells["Nombre"].Value.ToString().IndexOf(textoBusqueda, StringComparison.OrdinalIgnoreCase) >= 0
+                            || row.Cells["id"].Value.ToString().IndexOf(textoBusqueda, StringComparison.OrdinalIgnoreCase) >= 0;
+
+                row.Visible = visible;
+
+            }
+        }
     }
 }
