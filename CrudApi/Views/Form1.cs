@@ -207,8 +207,8 @@ namespace CrudApi
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            
-            
+
+
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
@@ -219,11 +219,16 @@ namespace CrudApi
 
             btnGuardar.BackColor = Color.Yellow;
             btnGuardar.ForeColor = Color.Black;
-            
+
 
             btnEliminar.BackColor = Color.Red;
 
             btnEditar.BackColor = Color.Green;
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
 
         }
     }

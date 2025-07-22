@@ -54,6 +54,7 @@
             panel2 = new Panel();
             label7 = new Label();
             label1 = new Label();
+            textBox1 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvCharacters).BeginInit();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -152,6 +153,7 @@
             // 
             panel4.BackColor = Color.PaleTurquoise;
             panel4.BorderStyle = BorderStyle.FixedSingle;
+            panel4.Controls.Add(textBox1);
             panel4.Controls.Add(btnEditar);
             panel4.Controls.Add(button1);
             panel4.Controls.Add(btnEliminar);
@@ -314,6 +316,7 @@
             label2.Size = new Size(293, 34);
             label2.TabIndex = 0;
             label2.Text = "CRUD DE USUARIOS";
+            label2.Click += label2_Click;
             // 
             // panel2
             // 
@@ -343,6 +346,13 @@
             label1.Name = "label1";
             label1.Size = new Size(356, 138);
             label1.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(153, 124);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(380, 27);
+            textBox1.TabIndex = 14;
             // 
             // Form1
             // 
@@ -393,5 +403,6 @@
         private DataGridViewTextBoxColumn Sexo;
         private Button btnEditar;
         private Label label7;
+        private TextBox textBox1;
     }
 }
