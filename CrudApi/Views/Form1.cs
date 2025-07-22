@@ -226,5 +226,10 @@ namespace CrudApi
             btnEditar.BackColor = Color.Green;
 
         }
+        private void ActualizarContador()
+        {
+            int total = dgvCharacters.Rows.Count;
+            lblTotalRegistros.Text = $"Total registros: {total}";
+        }
     }
 }
