@@ -54,6 +54,7 @@
             panel2 = new Panel();
             label7 = new Label();
             label1 = new Label();
+            label8 = new Label();
             ((System.ComponentModel.ISupportInitialize)dgvCharacters).BeginInit();
             panel1.SuspendLayout();
             panel4.SuspendLayout();
@@ -282,6 +283,7 @@
             // groupBox1
             // 
             groupBox1.BackColor = Color.Transparent;
+            groupBox1.Controls.Add(label8);
             groupBox1.Controls.Add(dgvCharacters);
             groupBox1.Font = new Font("Times New Roman", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             groupBox1.ForeColor = SystemColors.ActiveCaptionText;
@@ -344,6 +346,15 @@
             label1.Size = new Size(356, 138);
             label1.TabIndex = 3;
             // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(817, 356);
+            label8.Name = "label8";
+            label8.Size = new Size(55, 19);
+            label8.TabIndex = 2;
+            label8.Text = "label8";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -359,6 +370,7 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             panel2.ResumeLayout(false);
@@ -393,5 +405,6 @@
         private DataGridViewTextBoxColumn Sexo;
         private Button btnEditar;
         private Label label7;
+        private Label label8;
     }
 }
